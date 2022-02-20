@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./css/index4.css">
+    <title>CSE391</title>
+    <link rel="shortcut icon" href="img/brain.png" type="image/x-png">
+</head>
+<body>
+    
+    <div>
+        <ul class="nav">
+            <li class="nav_element"><a class="link" href="index.html">Quote Generator</a></li>
+            <li class="nav_element"><a class="link" href="./index2.html">Hero Converter</a></li>
+            <li class="nav_element"><a class="link" href="./index3.html">Min-Max Finder</a></li>
+            <li class="nav_element"><a class="link" href="./index4.html">Magic</a></li>
+        </ul>
+    </div>
+
+    <div id="magic">
+        <h1>Magic!</h1>
+        <br>
+       <textarea id="inp" cols="30" rows="10"></textarea>
+       <br>
+       <div id="buttons">
+            <button id="button_1" class="button" onclick="clearit()">Clear it</button>
+            <button id="button_2" class="button" onclick="capitalize()">Capitalize</button>
+            <button id="button_3" class="button" onclick="sort()"Sort>Sort</button>
+            <button id="button_4" class="button" onclick="rev()">Reverse</button>
+            <button id="button_5" class="button" onclick="stripBlank()">Strip Blank</button>
+            <button id="button_6" class="button" onclick="addNumber()">Add number</button>
+            <button id="button_7" class="button" onclick="shuffle()">Shuffle</button>
+       </div>
+    </div>
+
+    <script>
+        // clear it
+        function clearit(){
+            document.getElementById("inp").value = "";
+        }
+        
+        // capitalize
+        function capitalize(){
+            let y = document.getElementById("inp").value;
+            y = y.toUpperCase();
+            document.getElementById("inp").value = y;
+        }
+
+        // sort
+        function sort(){
+            let x = document.getElementById("inp").value;
+            let arr = x.split("\n");
+            arr = arr.sort();
+            let y = "";
+            for(i=0; i<arr.length; i++){
+                y =y+arr[i]+"\n";
+            }
+            document.getElementById("inp").value = y;
+        }
+
+        // Reverse
+        function rev(){
+            let x = document.getElementById("inp").value;
+            let y = "";
+            let arr = x.split("\n");
+            for(i=0; i<arr.length; i++){
+                let arr2 = arr[i].split(" ");
+                arr2 = arr2.reverse();
+                y = y+arr2+"\n";
+            }
+            y=y.replace(/,/g, " ");
+            document.getElementById("inp").value = y;
+        }
+
+        // Strip blank
+        function stripBlank(){
+            let x = document.getElementById("inp").value;
+            let y = [];
+            let arr = x.split("\n");
+            for(i=0; i<arr.length; i++){
+                let g = arr[i].trim();
+                if(g!=""){
+                    y.push(g);
+                }
+            }
+            let d ="";
+            for(j=0; j<y.length; j++){
+                d=d+y[j]+"\n";
+            }
+            document.getElementById("inp").value = d;
+        }
+
+        //Add number
+        function addNumber(){
+            let x = document.getElementById("inp").value;
+            let y = "";
+            let arr = x.split("\n");
+            for(i=0; i<arr.length;i++){
+                y=y+ (i+1)+". "+arr[i]+"\n";
+            }
+            document.getElementById("inp").value = y;
+        }
+
+        //shuffle
+        function shuffle(){
+            let x = document.getElementById("inp").value;
+            let y = "";
+            let arr = x.split("\n");
+            let shuffled = arr.sort( ()=>Math.random()-0.5);
+            for(i=0; i<shuffled.length; i++){
+                y=y+shuffled[i]+"\n";
+            }
+            document.getElementById("inp").value = y;
+        }
+    </script>
+
+</body>
+</html>

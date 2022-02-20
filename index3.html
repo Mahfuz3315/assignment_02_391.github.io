@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./css/index3.css">
+    <title>CSE391</title>
+    <link rel="shortcut icon" href="img/brain.png" type="image/x-png">
+</head>
+<body>
+    
+    <div>
+        <ul class="nav">
+            <li class="nav_element"><a class="link" href="index.html">Quote Generator</a></li>
+            <li class="nav_element"><a class="link" href="./index2.html">Hero Converter</a></li>
+            <li class="nav_element"><a class="link" href="./index3.html">Min-Max Finder</a></li>
+            <li class="nav_element"><a class="link" href="./index4.html">Magic</a></li>
+        </ul>
+    </div>
+
+    <div id="min_max">
+        <div class="series_input">
+            <p class="input">Input series of number: </p>
+            <input type="text" name="hmm" id="inp" class="input" onkeyup="calculation()">
+        </div>
+        <br>
+        <div class="series_input">
+            <p class="input">Min: </p>
+        <p id="min" class="input"></p>
+        </div>
+        <br>
+        <div class="series_input">
+            <p class="input">Max: </p>
+            <p id="max" class="input"></p>
+        </div>
+        <br>
+        <div class="series_input">
+            <p class="input">Sum: </p>
+            <p id="sum" class="input"></p>
+        </div>
+        <br>
+        <div class="series_input">
+            <p class="input">Average: </p>
+            <p id="average" class="input"></p>
+        </div>
+        <br>
+        <div class="series_input">
+            <p class="input">Reverse order: </p>
+            <p id="rev" class="input"></p>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        function calculation(){
+            let x = document.getElementById("inp").value;
+            const arr = x.split(",");
+            const arr2 = [];
+            let sum =0;
+
+            for(let i=0; i<arr.length; i++){
+                let x = arr[i]
+                arr2[i]=parseInt(x);
+            }
+            // sum
+            for(let i=0; i<arr2.length; i++){
+                sum = sum+arr2[i];
+            }
+            document.getElementById("sum").innerText = sum;
+
+            // min
+            let min = Math.min(...arr2);
+            document.getElementById("min").innerHTML = min;
+
+            // max
+            let max = Math.max(...arr2);
+            document.getElementById("max").innerHTML = max;
+
+            // average
+            let av = sum/arr2.length;
+            document.getElementById("average").innerHTML = av;
+
+            // reverse
+            let temp = arr2;
+            let rev = temp.reverse();
+            document.getElementById("rev").innerHTML = rev;
+
+        }
+    </script>
+
+</body>
+</html>

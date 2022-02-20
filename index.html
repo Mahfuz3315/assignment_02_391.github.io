@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>CSE391</title>
+    <link rel="shortcut icon" href="img/brain.png" type="image/x-png">
+</head>
+<body>
+    
+    <div>
+        <ul class="nav">
+            <li class="nav_element"><a class="link" href="index.html">Quote Generator</a></li>
+            <li class="nav_element"><a class="link" href="./index2.html">Hero Converter</a></li>
+            <li class="nav_element"><a class="link" href="./index3.html">Min-Max Finder</a></li>
+            <li class="nav_element"><a class="link" href="./index4.html">Magic</a></li>
+        </ul>
+    </div>
+
+
+    <div id="random_quotes">
+        <p id="quote">Click The button for a Quote</p>
+        <br>
+        <div class="buttons">
+            <button id="gg" class="button1"></button>
+            <button id="yy" class="button1"></button>
+            <br>
+            <button id="rr" class="button1"></button>
+            <button id="bb" class="button1"></button>
+        </div> 
+    </div>
+
+    <script>
+
+        /* Quote Generator*/
+        const quotes = ["Frankly, my dear, I don't give a damn", "I'm going to make him an offer he can't refuse", "You don't understand! I could've had class. I could've been a contender. I could've been somebody, instead of a bum, which is what I am", "Toto, I've got a feeling we're not in Kansas anymore", "Here's looking at you, kid.", "Go ahead, make my day", "All right, Mr. DeMille, I'm ready for my close-up", "May the Force be with you", "Fasten your seatbelts. It's going to be a bumpy night", "The stuff that dreams are made of"];
+        document.getElementById("gg").onclick = changeQuote1;
+        document.getElementById("yy").onclick = changeQuote2;
+        document.getElementById("rr").onclick = changeQuote3;
+        document.getElementById("bb").onclick = changeQuote4;
+
+
+        function changeQuote1(){
+            document.getElementById("quote").innerHTML = quotes[Math.floor((Math.random() * 10))];
+            document.getElementById("quote").style.color = '#000000';
+            document.getElementById("quote").style.backgroundColor = '#C3B091';
+            document.getElementById("quote").style.borderColor = '#E4CDA7';
+        }
+        function changeQuote2(){
+            document.getElementById("quote").innerHTML = quotes[Math.floor((Math.random() * 10))];
+            document.getElementById("quote").style.color = 'red';
+            document.getElementById("quote").style.backgroundColor = '#FFFDA2';
+            document.getElementById("quote").style.borderColor = '#FFAB76';
+        }
+        function changeQuote3(){
+            document.getElementById("quote").innerHTML = quotes[Math.floor((Math.random() * 10))];
+            document.getElementById("quote").style.color = 'white';
+            document.getElementById("quote").style.backgroundColor = '#CA965C';
+            document.getElementById("quote").style.borderColor = '#EEC373';
+        }
+        function changeQuote4(){
+            document.getElementById("quote").innerHTML = quotes[Math.floor((Math.random() * 10))];
+            document.getElementById("quote").style.color = 'blue';
+            document.getElementById("quote").style.backgroundColor = '#FFFDA2';
+            document.getElementById("quote").style.borderColor = '#FF6363';
+        }
+        
+
+    </script>
+
+</body>
+</html>

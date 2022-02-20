@@ -1,0 +1,79 @@
+* {
+    margin: 0%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/*Navigation Bar*/
+.nav{  
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    background-color: burlywood;
+    text-align: center;
+}
+
+.nav .nav_element{
+    display: inline;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav > .nav_element > .link{
+    text-decoration: none;
+    color: black;
+}
+.nav > .nav_element > .link:hover{
+    color: brown;
+}
+
+/* Magic! */
+#magic{
+    padding-left: 300px;
+    margin: 100px;
+}
+
+#magic > #inp{
+    height: 300px;
+    width: 535px;
+}
+#magic > #buttons > .buttons{
+    margin: 10px;
+}
+
+#magic > #buttons > #button_1{
+    height: 20px;
+    width: 70px;
+}
+#magic > #buttons > #button_2{
+    height: 20px;
+    width: 70px;
+}
+#magic > #buttons > #button_3{
+    height: 20px;
+    width: 40px;
+}
+#magic > #buttons > #button_4{
+    height: 20px;
+    width: 65px;
+}
+#magic > #buttons > #button_5{
+    height: 20px;
+    width: 90px;
+}
+#magic > #buttons > #button_6{
+    height: 20px;
+    width: 90px;
+}
+#magic > #buttons > #button_7{
+    height: 20px;
+    width: 90px;
+}

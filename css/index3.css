@@ -1,0 +1,50 @@
+* {
+    margin: 0%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/*Navigation Bar*/
+.nav{  
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    background-color: burlywood;
+    text-align: center;
+}
+
+.nav .nav_element{
+    display: inline;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav > .nav_element > .link{
+    text-decoration: none;
+    color: black;
+}
+.nav > .nav_element > .link:hover{
+    color: brown;
+}
+
+/*min-max finder*/
+#min_max{
+    margin: 250px;
+}
+
+#min_max > .series_input{
+    display: flex;
+}
+
+#min_max > .series_input > .input{
+    margin-left: 5px;
+    margin-right: 5px;
+}

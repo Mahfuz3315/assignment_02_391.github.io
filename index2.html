@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./css/index2.css">
+    <title>CSE391</title>
+    <link rel="shortcut icon" href="img/brain.png" type="image/x-png">
+</head>
+<body>
+    
+    <div>
+        <ul class="nav">
+            <li class="nav_element"><a class="link" href="index.html">Quote Generator</a></li>
+            <li class="nav_element"><a class="link" href="./index2.html">Hero Converter</a></li>
+            <li class="nav_element"><a class="link" href="./index3.html">Min-Max Finder</a></li>
+            <li class="nav_element"><a class="link" href="./index4.html">Magic</a></li>
+        </ul>
+    </div>
+
+    <div id="hero_converter">
+        <div class="box">
+            <p class="element">Convert:</p>
+            <input id="inp" class="element" type="number">
+            <select id="conversion_type">
+                <option value="1">lbs to kg</option>
+                <option value="2">kg to lbs</option>
+            </select>
+            <button id="Go" class="element">Go</button>
+            <p id="out" class="element"></p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("Go").onclick = convert;
+
+        function convert(){
+            let x =  0.4536;
+            let y =  2.2046;
+            let z = document.getElementById("inp").value;
+            let m;
+
+            let k = document.getElementById("conversion_type");
+            let l = k.value;
+
+            if(l==1){
+                m = z*x;
+                document.getElementById("out").innerHTML = m+" killogram";
+            }else{
+                m = z*y;
+                document.getElementById("out").innerHTML = m+" pounds";
+            }
+            
+        }
+        
+        
+
+    </script>
+
+</body>
+</html>
